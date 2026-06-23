@@ -45,3 +45,54 @@ if (searchInput) {
     });
   });
 }
+// --- Load API Data ---
+let destinations = [];
+
+fetch("api.json")
+  .then(response => response.json())
+  .then(data => {
+    destinations = data;
+  })
+  .catch(error => console.error("Error loading API:", error));
+
+
+// --- Search Bar Logic ---
+const searchInput = document.getElementById("nav-search");
+const resultsBox = document.getElementById("search-results");
+
+if (searchInput) {
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase().trim();
+
+    if (query === "") {
+      resultsBox.innerHTML = "";
+      return;
+    }
+
+    const filtered = destinations.filter(item =>
+      item.name.toLowerCase().includes(query) ||
+      item.country.toLowerCase().includes(query) ||
+      item.description.toLowerCase().includes(query)
+    );
+
+    displayResults(filtered);
+  });
+}
+
+
+// --- Display Results ---
+function displayResults(list) {
+  resultsBox.innerHTML = "";
+
+  if (list.length === 0) {
+    resultsBox.innerHTML = "<p>No results found</p>";
+    return;
+  }
+
+  list.forEach(item => {
+    const div = document.createElement("div");
+    div.classList.add("result-item");
+    div.textContent = `${item.name}, ${item.country}`;
+    resultsBox.appendChild(div);
+  });
+}
