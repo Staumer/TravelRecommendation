@@ -1,1 +1,18 @@
+[
+  {
+    "name": "Kyoto",
+    "country": "Japan",
+    "description": "Temples, gardens, and traditional streets"
+  },
+  {
+    "name": "Santorini",
+    "country": "Greece",
+    "description": "White-washed villages and sunsets"
+  },
+  {
+    "name": "Banff",
+    "country": "Canada",
+    "description": "Lakes, mountains, and wildlife"
+  }
+]
 
