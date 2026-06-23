@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dream Miles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Dream Miles</h1>
+    <p>Your personalized gateway to unforgettable journeys.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Featured Destinations</h2>
+
+      <div class="destinations">
+        <article class="card">
+          <h3>Kyoto, Japan</h3>
+          <p class="tagline">Temples, gardens, and timeless streets.</p>
+          <ul>
+            <li>Fushimi Inari Shrine</li>
+            <li>Arashiyama Bamboo Grove</li>
+            <li>Gion District</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Santorini, Greece</h3>
+          <p class="tagline">White-washed villages and cliffside sunsets.</p>
+          <ul>
+            <li>Oia Village</li>
+            <li>Red Beach</li>
+            <li>Caldera Views</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Banff, Canada</h3>
+          <p class="tagline">Turquoise lakes and towering peaks.</p>
+          <ul>
+            <li>Lake Louise</li>
+            <li>Moraine Lake</li>
+            <li>Banff Gondola</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Travel Styles</h2>
+      <ul class="styles-list">
+        <li>Adventure Escapes</li>
+        <li>Relaxing Retreats</li>
+        <li>Cultural Journeys</li>
+        <li>Urban Explorations</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Plan Your Trip</h2>
+      <ul class="tools-list">
+        <li>Suggested itineraries</li>
+        <li>Packing guides</li>
+        <li>Budget planning</li>
+        <li>Local tips & etiquette</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Dream Miles
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
