@@ -93,3 +93,24 @@ footer {
   border: 1px solid #d1d5db;
   font-size: 1rem;
 }
+
+.results-box {
+  position: absolute;
+  background: white;
+  width: 260px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 4px;
+  z-index: 10;
+}
+
+.result-item {
+  padding: 0.6rem;
+  cursor: pointer;
+}
+
+.result-item:hover {
+  background: #f3f4f6;
+}
